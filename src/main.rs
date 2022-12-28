@@ -4,6 +4,7 @@ use std::env;
 mod common;
 mod day_1;
 mod day_2;
+mod day_3;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -12,8 +13,9 @@ fn main() {
 
     let filename = format!("input/day_{}.txt", day);
     let lines = common::read_input_for_day(filename);
-    if day == "1" { display_solution(&day_1::SolutionDay1 { lines: lines }); }
-    else if day == "2" { display_solution(&day_2::SolutionDay2 { lines: lines }); }
+    if day == "1" { display_solution(&day_1::SolutionDay1 { lines }); }
+    else if day == "2" { display_solution(&day_2::SolutionDay2 { lines }); }
+    else if day == "3" { display_solution(&day_3::SolutionDay3 { lines }); }
 }
 
 fn display_solution(solution: &impl Solution) {
