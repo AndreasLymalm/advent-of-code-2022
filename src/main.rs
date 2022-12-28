@@ -5,6 +5,7 @@ mod common;
 mod day_1;
 mod day_2;
 mod day_3;
+mod day_4;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -16,6 +17,7 @@ fn main() {
     if day == "1" { display_solution(&day_1::SolutionDay1 { lines }); }
     else if day == "2" { display_solution(&day_2::SolutionDay2 { lines }); }
     else if day == "3" { display_solution(&day_3::SolutionDay3 { lines }); }
+    else if day == "4" { display_solution(&day_4::SolutionDay4 { lines }); }
 }
 
 fn display_solution(solution: &impl Solution) {
