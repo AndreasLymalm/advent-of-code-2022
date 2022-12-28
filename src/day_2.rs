@@ -6,7 +6,7 @@ pub struct SolutionDay2 {
 }
 
 impl Solution for SolutionDay2 {
-    fn part_1(&self) -> Result<i32, Error>  {
+    fn part_1(&self) -> Result<String, Error>  {
         let mut result = 0;
         for i in 0..self.lines.len() {
             let line: Vec<&str> = self.lines[i].split(" ").collect();
@@ -30,10 +30,10 @@ impl Solution for SolutionDay2 {
             }
         }
         
-        return Ok(result);
+        return Ok(result.to_string());
     }
     
-    fn part_2(&self) -> Result<i32, Error>  {
+    fn part_2(&self) -> Result<String, Error>  {
         let mut result = 0;
         for i in 0..self.lines.len() {
             let line: Vec<&str> = self.lines[i].split(" ").collect();
@@ -73,6 +73,6 @@ impl Solution for SolutionDay2 {
             }
         }
         
-        return Ok(result);
+        return Ok(result.to_string());
     }
 }

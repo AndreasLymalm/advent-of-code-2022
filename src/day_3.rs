@@ -6,7 +6,7 @@ pub struct SolutionDay3 {
 }
 
 impl Solution for SolutionDay3 {
-    fn part_1(&self) -> Result<i32, Error>  {
+    fn part_1(&self) -> Result<String, Error>  {
         let mut result: i32 = 0;
         for i in 0..self.lines.len() {
             let line: &String = self.lines.get(i).unwrap();
@@ -31,10 +31,10 @@ impl Solution for SolutionDay3 {
             // Adjust uppercase letters
             result += priority + (if misplaced_item.is_lowercase() { 0 } else { 26 });
         }
-        return Ok(result);
+        return Ok(result.to_string());
     }
     
-    fn part_2(&self) -> Result<i32, Error>  {
+    fn part_2(&self) -> Result<String, Error>  {
         let mut result = 0;
         let mut group_item_types: HashMap<char, i32> = HashMap::new();
         for i in 0..self.lines.len() {
@@ -70,6 +70,6 @@ impl Solution for SolutionDay3 {
                 result += priority + (if type_of_badge.is_lowercase() { 0 } else { 26 });
             }
         }
-        return Ok(result);
+        return Ok(result.to_string());
     }
 }

@@ -6,7 +6,7 @@ pub struct SolutionDay1 {
 }
 
 impl Solution for SolutionDay1 {
-    fn part_1(&self) -> Result<i32, Error>  {
+    fn part_1(&self) -> Result<String, Error>  {
         let mut max_calories = 0;
         let mut current_elfs_calories = 0;
         for i in 0..self.lines.len() {
@@ -22,10 +22,10 @@ impl Solution for SolutionDay1 {
             }
         }
         
-        return Ok(max_calories);
+        return Ok(max_calories.to_string());
     }
     
-    fn part_2(&self) -> Result<i32, Error>  {
+    fn part_2(&self) -> Result<String, Error>  {
         let mut top_1_calories = 0;
         let mut top_2_calories = 0;
         let mut top_3_calories = 0;
@@ -51,7 +51,8 @@ impl Solution for SolutionDay1 {
             }
         }
         
-        return Ok(top_1_calories + top_2_calories + top_3_calories);
+        let result = top_1_calories + top_2_calories + top_3_calories;
+        return Ok(result.to_string());
         
         // return Err(Error::new(ErrorKind::Other, "Solution not found"));
     }

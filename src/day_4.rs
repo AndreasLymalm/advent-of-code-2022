@@ -6,7 +6,7 @@ pub struct SolutionDay4 {
 }
 
 impl Solution for SolutionDay4 {
-    fn part_1(&self) -> Result<i32, Error>  {
+    fn part_1(&self) -> Result<String, Error>  {
         let mut result: i32 = 0;
         for i in 0..self.lines.len() {
             // Parse line
@@ -23,10 +23,10 @@ impl Solution for SolutionDay4 {
                 result += 1;
             }
         }
-        return Ok(result);
+        return Ok(result.to_string());
     }
     
-    fn part_2(&self) -> Result<i32, Error>  {
+    fn part_2(&self) -> Result<String, Error>  {
         let mut result: i32 = 0;
         for i in 0..self.lines.len() {
             // Parse line
@@ -45,6 +45,6 @@ impl Solution for SolutionDay4 {
                 result += 1;
             }
         }
-        return Ok(result);
+        return Ok(result.to_string());
     }
 }

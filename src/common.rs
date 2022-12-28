@@ -2,8 +2,8 @@ use std::fs::File;
 use std::io::{prelude::*, BufReader, Error};
 
 pub trait Solution {
-    fn part_1(&self) -> Result<i32, Error>;
-    fn part_2(&self) -> Result<i32, Error>;
+    fn part_1(&self) -> Result<String, Error>;
+    fn part_2(&self) -> Result<String, Error>;
 }
 
 pub fn read_input_for_day(filename: String) -> Vec<String> {
